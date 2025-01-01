@@ -9,11 +9,6 @@
 </head>
 <body>
 <div class="container">
-
-    <div th:if="${errorMessage}" class="alert alert-danger">
-        <p th:text="${errorMessage}"></p>
-    </div>
-
     <form class="form-signin" action="/login" method="post">
         <h2 class="form-signin-heading">Please sign in</h2>
         <p>
@@ -28,12 +23,9 @@
             </div>
         </div>
     </form>
+    <div th:if="${errorMessage}" class="alert alert-danger">
+        <p th:text="${errorMessage}"></p>
+    </div>
 </div>
 </body>
 </html>
-
-<!--<div class="row">-->
-<!--    <div class="col text-center"> &lt;!&ndash; text-center также центрирует содержимое &ndash;&gt;-->
-<!--        <button type="button" class="btn btn-primary">Кнопка</button>-->
-<!--    </div>-->
-<!--</div>-->
